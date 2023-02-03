@@ -12,7 +12,7 @@ class Display:
         options.brightness = 50
         self.matrix = RGBMatrix(options = options)
         self.font = graphics.Font()
-        self.font.LoadFont("fonts/4x6.bdf") # tom-thumb.bdf")
+        self.font.LoadFont("fonts/4x6.bdf")
         self.palette = [graphics.Color(0x33, 0x66, 0xbb), graphics.Color(0xaa, 0x33, 0x55), graphics.Color(0xee, 0xdd, 0)]
 
     def now_playing(self, header, artist, track):
