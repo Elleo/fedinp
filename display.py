@@ -25,7 +25,7 @@ class Display:
         lines = textwrap.wrap(text, 16)
         line_num = start_line
         for line in lines[-5:]:
-            x = int((64 - len(line) * 4) / 2) + 1 # center
+            x = int((64 - len(line) * 4) / 2) # center
             graphics.DrawText(self.matrix, self.font, x, line_num * 8 - 2, color, line)
             line_num += 1
         return start_line + len(lines)
