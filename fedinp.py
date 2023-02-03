@@ -19,8 +19,8 @@ class NP:
             np = tds[0]
             m = re.search("Now Playing: (.*)Artist Link", np.get_text())
             text = m.group(1)
-            text = text.replace("-", "\n\r")
-            self.d.show_text("Radio Free Fedi\n\r" + text)
+            artist, track = text.split(" - ", 1)
+            self.d.now_playing("Radio Free Fedi", artist, track)
             time.sleep(10)
 
 if __name__ == "__main__":
